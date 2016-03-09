@@ -35,7 +35,7 @@ console.log(z());
 // Now those above output "10", "20", "[10, 20, 30]"
 ```
 
-The idea is simple. 99% of your program should consist of pure functions and values. The 1% that doesn't should be written as if it did. And, when you do need to mutate that 1% - just do it. Not indirectly like we do. Just mutate it, and let PureState deal with recomputing every other value that depends purely, doing the minimal amount of work necessary. Since those "mutations" happen in response to events such as `onkeypress`, referential transaparency isn't broken. And never again deal with state directly.
+The idea is simple. 99% of your program should consist of pure functions and values. The 1% that isn't pure should be written as if it was. Then, when you do need to mutate that 1% - just do it. Not indirectly like you do. Just do it, and let PureState deal with recomputing every other value that depends purely, doing the minimal amount of work necessary. Since those "mutations" happen in response to events such as `onkeypress`, referential transaparency isn't broken. And never again deal with state directly.
 
 See `example_counter.html` and `example_todo.html` for a quick example of how that simple concept is powerful enough to, for example, write interactive MVC web applications in very simple, pure way. That is just to show the idea - of course those examples could be much better with, for example, VirtualDOM or React instead of strings for rendering.
 
