@@ -32,7 +32,7 @@ console.log(x());
 console.log(y());
 console.log(z());
 
-// Now those above output "10", "20", "[10, 20, 30]"
+// Now those above output "10", "11", "[10, 11, 21]"
 ```
 
 The idea is simple. 99% of your program should consist of pure functions and values. The 1% that isn't pure should be written as if it was. Then, when you do need to mutate that 1% - just do it. Not indirectly like you do. Just do it, and let PureState deal with recomputing every other value that depends on it, doing the minimal amount of work necessary. Since those "mutations" happen in response to events such as `onkeypress`, referential transaparency isn't broken. 
