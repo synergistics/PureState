@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="purestate.js"></script>
+</head>
+<body>
+<script>
+
+state = PureState;
+
+// MODEL
+count = state(0);
+
+
+// VIEW
+app = state(() =>
+  "<div>Value: " + count() + "</div>" +
+  "<button onclick='count(count()+1), refresh()'> +1 </button>" +
+  "<button onclick='count(count()-1), refresh()'> -1 </button>" +
+  "<button onclick='count(count()*2), refresh()'> *2 </button>" +
+  "<button onclick='count(count()/2), refresh()'> /2 </button>");
+
+
+// Plumbing
+window.onload = refresh = function(){
+  document.body.innerHTML = app();
+};
+
+
+</script>
+</body>
+</html>
