@@ -19,7 +19,7 @@ var PureState = (function(){
       refresh(node.depended_by[i]);
   };
 
-  // Do build a stateful value, you must provide either
+  // To build a stateful value, you must provide either
   // the initial state (a JS value) or a computed state,
   // i.e., a function that uses other stateful values.
   function state(compute){
