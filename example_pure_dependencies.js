@@ -16,6 +16,6 @@ console.log(x());
 console.log(y());
 console.log(z());
 
-// Now those above output "10", "20", "[10, 20, 30]"
+// Now those above output "10", "11", "[10, 11, 21]"
 
 
